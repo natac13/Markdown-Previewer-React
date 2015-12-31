@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import marked from 'marked';
 import 'normalize.css';
 import style from './style';
 
@@ -11,6 +11,7 @@ export default class App extends Component {
     constructor(props) {
         super(props);
         this.handleChange = this.handleChange.bind(this);
+        this.rawMarkup    = this.rawMarkup.bind(this);
         this.state = {
             input: ''
         }
@@ -24,11 +25,16 @@ export default class App extends Component {
         });
     }
 
+    rawMarkup() {
+        var raw = marked(this.state.input, {sanitize: true});
+        return { __html: raw };
+    }
+
     render() {
         return (
             <div className={style.app}>
                 <Input onChange={this.handleChange} />
-                <LivePreview markdown={this.state.input} />
+                <LivePreview getMarkdown={() => this.rawMarkup()} />
             </div>
         );
     }

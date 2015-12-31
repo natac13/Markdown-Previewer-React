@@ -2,11 +2,13 @@ import React from 'react';
 
 import style from './style';
 
-const LivePreview = ( { markdown } ) => {
-
+const LivePreview = ( { getMarkdown } ) => {
+    console.log(getMarkdown())
     return (
         <div className={style.container}>
-            {markdown}
+            <div className={style.preview} dangerouslySetInnerHTML={getMarkdown()}>
+
+            </div>
         </div>
     )
 

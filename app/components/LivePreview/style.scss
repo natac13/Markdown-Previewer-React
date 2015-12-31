@@ -1,4 +1,7 @@
 .container {
-    display: flex;
-    flex: 1 50vh;
+  display: flex;
+  flex: 1 50vh;
+  .preview {
+    padding: 15px;
+  }
 }

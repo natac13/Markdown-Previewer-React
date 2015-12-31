@@ -6,8 +6,8 @@ const Input = ( { onChange } ) => {
     return (
         <div className={style.container}>
             <div className={style.input}>
-                <label for="markdown"> Enter Markdown Here</label>
-                <textarea col="50" row="50" id="markdown" onChange={onChange} />
+                <label for="markdown" className={style.label}> Enter Markdown Here</label>
+                <textarea className={style.text} id="markdown" onChange={onChange} />
             </div>
         </div>
     );
