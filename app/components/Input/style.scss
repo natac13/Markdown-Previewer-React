@@ -1,0 +1,10 @@
+.container {
+    display: flex;
+    flex: 1 50vh;
+}
+
+.input {
+    flex: 1 50em;
+    display: flex;
+    flex-flow: column;
+}
