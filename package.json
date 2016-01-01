@@ -9,11 +9,11 @@
     "test:watch": "npm run test -- --watch",
     "clean": "rimraf ./build/",
     "prebuild": "npm run clean",
-    "build": "cross-env NODE_ENV=production webpack -p --config ./webpack.production.config.js --progress --color",
+    "build": "cross-env NODE_ENV=production webpack -p --config ./webpack.config.production.js --progress --color",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "commit": "git-cz",
-    "postinstall": "webpack -p --config ./webpack.production.config.js --progress --colors"
+    "postinstall": "webpack -p --config ./webpack.config.production.js --progress --colors"
   },
   "repository": {
     "type": "git",

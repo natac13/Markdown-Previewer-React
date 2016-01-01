@@ -1,6 +1,25 @@
+$warning: #D10000;
+
+@keyframes pulse {
+  0% {
+    border: 5px dashed $warning;
+  }
+
+  50% {
+    border: 5px dashed rgba($warning, 0.3);
+  }
+
+  100% {
+    border: 5px dashed $warning;
+  }
+};
+
 .container {
   display: flex;
-  flex: 1 50vh;
+  flex: 1;
+  animation: pulse 1s infinite;
+  margin: 0 1em;
+
 }
 
 .input {
@@ -11,6 +30,7 @@
 
   .label {
     align-self: center;
+    font-size: 1.4em;
   }
 }
 

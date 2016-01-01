@@ -1,6 +1,13 @@
+$border-color: #845E37;
+$shade: #5D5C5C;
+
 .container {
   display: flex;
-  flex: 1 50vh;
+  flex: 1;
+  border: 1px solid $border-color;
+  box-shadow: 0 0 20px $shade;
+  margin: 0 1em;
+
   .preview {
     padding: 15px;
   }

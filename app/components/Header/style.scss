@@ -1,0 +1,47 @@
+$link: #A06128;
+
+
+.container {
+  flex: 1 1000em;
+  font-size: 1.2em;
+  text-align: center;
+  background: linear-gradient(to top right, #5FD9D6, #89CF6E);
+  padding: 1em;
+  margin-bottom: 1em;
+}
+@keyframes fast {
+  0% {
+    transform: translate(-2em)
+                skew(-45deg);
+  }
+
+  50% {
+    transform: translate(10em)
+                skew(45deg);
+  }
+
+  100% {
+    transform: translate(100em) skew(80deg);
+  }
+
+
+}
+
+.title {
+  transform: skew(-23deg);
+  font-family: 'Geostar', cursive;
+
+  &:hover {
+    animation: fast 3s;
+    animation-delay: .4s;
+  }
+}
+
+.code {
+  color: $link;
+  text-decoration: none;
+
+  &:hover {
+    color: lighten($link, 10%);
+  }
+}
