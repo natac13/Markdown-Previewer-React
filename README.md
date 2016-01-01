@@ -6,7 +6,7 @@
 
 This is my 4th React project!
 
-[Live](http//natac13.github.io/Markdown-Previewer-React)
+[Live](http://natac13.github.io/Markdown-Previewer-React/)
 
 -----------------------------------------------------
 
